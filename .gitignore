@@ -1,4 +1,3 @@
-config/database.yml
 config/database.yml.mt
 .DS_Store
 .DS_config
