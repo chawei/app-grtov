@@ -1,0 +1,7 @@
+config/database.yml
+config/database.yml.mt
+.DS_Store
+.DS_config
+public/system
+public/videos
+public/.htaccess
