@@ -1,11 +1,14 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
-  layout 'admin'
   # Be sure to include AuthenticationSystem in Application Controller instead
   # include AuthenticatedSystem
 
   # render new.rhtml
   def new
+  end
+  
+  def show
+    redirect_to home_path
   end
 
   def create
@@ -32,7 +35,8 @@ class SessionsController < ApplicationController
       if request.xhr?
         render :text => 'Wrong username/password'
       else
-        render :action => 'new'
+        flash[:notice] = "Login error"
+        redirect_to home_path
       end
     end
   end

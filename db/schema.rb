@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(:version => 20100324225603) do
     t.datetime "project_image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "project_date",               :default => '2010-03-03'
+    t.date     "project_date",               :default => '2010-10-14'
   end
 
   create_table "projects_x5ers", :id => false, :force => true do |t|

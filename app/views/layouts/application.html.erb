@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title><%= h(yield(:title) || "x5") %></title>
+    <title><%= h(yield(:title) || "feric") %></title>
     <%= stylesheet_link_tag 'public', :media => 'all' %>
     <script type="text/javascript" src="/javascripts/jquery.js"></script>
     <script type="text/javascript" src="/javascripts/jquery.address.js"></script>
@@ -34,7 +34,7 @@
             <div class="contact_items">
               <div class="contact_item">t+886.2706.6855</div>
               <div class="contact_item">f+886.2706.6672</div>
-              <div class="contact_item"><%= mail_to "Contact@timex5.com" %></div>
+              <div class="contact_item"><%= mail_to "Contact@feric.com" %></div>
             </div>
             <div id="search_box">
               <form action="<%= projects_path %>">
@@ -50,9 +50,9 @@
           <div id="main_menu_container">
             <div id='client_login'>
               <%- if client_logged_in? -%>
-              <div class='actions'><%= link_to 'Sign Out', client_logout_url %></div>
+              <!-- <div class='actions'><%= link_to 'Sign Out', client_logout_url %></div> -->
               <%- else -%>
-              <div class='actions'><%= link_to 'Sign In', '#', :id => 'sign_in_link' %></div>
+              <!-- <div class='actions'><%= link_to 'Sign In', '#', :id => 'sign_in_link' %></div> -->
               <div class='login_panel'>
                 <% form_tag session_path do -%>
                 <div class='msg'></div>
@@ -82,7 +82,7 @@
               <div class="menu_item"><%= link_to category.name, category_path(category), :class => classes %></div>
               <%- end -%>
               <% params[:controller] == "x5ers" ? classes = "current" : classes = '' -%>
-              <div class="menu_item"><%= link_to "X5ers", x5ers_path, :class => classes %></div>
+              <!-- <div class="menu_item"><%= link_to "X5ers", x5ers_path, :class => classes %></div> -->
               <div class="clear_fix"></div>
             </div>
           </div>
