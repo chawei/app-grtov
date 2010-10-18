@@ -1,6 +1,6 @@
 <% title "Categories" %>
 
-<% if Category.roots.blank? %>
+<% if Category.roots.empty? %>
 <div>Please add a <%= link_to "new category", new_admin_category_path %></div>
 
 <% else -%>
