@@ -9,14 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100324225603) do
+ActiveRecord::Schema.define(:version => 20101018165000) do
 
   create_table "categories", :force => true do |t|
     t.integer "parent_id"
     t.integer "children_count"
     t.integer "ancestors_count"
     t.integer "descendants_count"
-    t.boolean "hidden"
+    t.integer "hidden",            :default => 0
     t.string  "name"
     t.string  "short_name"
     t.boolean "published"
