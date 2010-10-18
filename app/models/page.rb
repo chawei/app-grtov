@@ -1,9 +1,13 @@
 class Page < ActiveRecord::Base
-  def self.x5ers_home
-    pages = Page.find(:all, :conditions => ['unique_name=?', 'x5ers_home'])
+  def self.custom
+    [self.homepage]
+  end
+  
+  def self.homepage
+    pages = Page.find(:all, :conditions => ['unique_name=?', 'homepage'])
     if pages.blank?
-      page = Page.create(:unique_name => 'x5ers_home',
-                         :name => 'X5ers Homepage',
+      page = Page.create(:unique_name => 'homepage',
+                         :name => 'Homepage',
                          :content => 'Please edit me')
     else
       page = pages[0]

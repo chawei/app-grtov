@@ -1,7 +1,7 @@
 class X5ersController < ApplicationController
   def index
     @x5ers = X5er.all
-    @x5ers_homepage = Page.x5ers_home
+    @x5ers_homepage = Page.homepage
   end
   
   def show

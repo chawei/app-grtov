@@ -3,7 +3,7 @@ class Admin::PagesController < ApplicationController
   before_filter :login_required
   
   def index
-    @pages = Page.all
+    @pages = Page.custom
   end
   
   def show
