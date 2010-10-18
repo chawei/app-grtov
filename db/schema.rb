@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(:version => 20101018165000) do
     t.integer "children_count"
     t.integer "ancestors_count"
     t.integer "descendants_count"
-    t.integer "hidden",            :default => 0
     t.string  "name"
     t.string  "short_name"
     t.boolean "published"
     t.integer "position"
+    t.integer "hidden"
   end
 
   create_table "categories_projects", :id => false, :force => true do |t|
